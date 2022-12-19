@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "outDir":"./dist/",
+    "target": "ES5",
+    "module": "CommonJS",
+    "strict": true,
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@t/*": ["types/*"]
+    },
+    "lib": ["esnext", "dom", "DOM.Iterable"],
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "types/**/*"],
+  "exclude": ["node_modules"]
+}
