@@ -6,7 +6,7 @@
 
     "plugins": [
         [
-            "@bable/plugin-transform-runtime",
+            "@babel/plugin-transform-runtime",
             {
                 "regenerator" : true
             }

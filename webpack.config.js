@@ -7,7 +7,7 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
-                use: 'bable-loader',
+                use: 'babel-loader',
                 exclude: /node_modules/,
             },
             {
@@ -28,7 +28,7 @@ module.exports = {
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
     },
-    
+
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
@@ -36,9 +36,15 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "..", "./src/index.html"),
+            template: "./index.html"
         }),
     ],
+
+    devServer: {
+        hot: true,
+        host: "localhost",
+        port: 5000
+    },
 
     mode: "development",
     stats: "errors-only",
